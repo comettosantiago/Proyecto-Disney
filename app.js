@@ -5,19 +5,13 @@ const { response } = require('express');
 const express = require('express');
 const app = express();
 const database = require('./database');
-
+const cors = require('cors');
 
 //--------MIDDLEWARES-------------
 app.use(express.json());
-
-//---------SERVER RUN-------------
-app.listen(process.env.PORT, () => {
-    console.log('Corriendo en puerto ' + process.env.PORT);
-})
+app.use(cors());
 
 //--------------RUTAS---------------
-
-//----------PARA PERSONAJES---------
 //obtener todos los personajes
 app.get('/characters', (req, res) => {
     const db = database.getDatabaseInstance();
@@ -28,17 +22,12 @@ app.get('/characters', (req, res) => {
 });
 
 //creacion de personajes
-const personaje = [
-    null,
-    'Debby Ryan',
-    28,
-    55,
-    'Deborah Ann Ryan​​, conocida como Debby Ryan, es una actriz y cantante estadounidense.​'
-]
 
 app.post('/characters/insert', (req, res) => {
+    const {nombre, edad, peso, historia } = req.body
+
     const db = database.getDatabaseInstance();
-    const result = db.createPersonaje(personaje);
+    const result = db.createPersonaje(nombre, edad, peso, historia);
 
     result
         .then(data => res.send(data));
@@ -64,3 +53,7 @@ app.delete('/characters/delete/:id', (req, res) => {
         .then(data => res.send(data));
 })
 
+//---------SERVER RUN-------------
+app.listen(process.env.PORT, () => {
+    console.log('Corriendo en puerto ' + process.env.PORT);
+})
