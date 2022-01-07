@@ -1,0 +1,51 @@
+body{
+    background-color: #2b2a33;
+}
+
+#tabla{
+    background-color: rgb(212, 154, 154);
+    border: rgb(143, 48, 48) solid 3px;
+    margin: 100px auto;
+    width: 300px;
+    height: fit-content;
+}
+#divtitle{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-variant: small-caps;
+}
+#databaseform{
+    display: grid;
+    width: 200px;
+    margin: auto;
+}
+input{
+    margin: 3px auto;
+}
+#listado{
+    background-color: rgb(212, 154, 154);
+    border: rgb(143, 48, 48) solid 3px;
+    margin: 100px auto;
+    width: 600px;
+    height: fit-content;
+}
+
+
+/* Edicion personajes */
+#editarpeliculas{
+    background-color: rgb(212, 154, 154);
+    border: rgb(143, 48, 48) solid 3px;
+    width: fit-content;
+    position: relative;
+    margin: 10px auto 100px auto;
+}
+
+
+.oculto{
+    display: none;
+}
+
+.selected{
+    background-color: rgba(143, 48, 48, 0.6);
+    width: 85%;
+}

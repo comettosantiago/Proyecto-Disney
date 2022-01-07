@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney - Gestion Peliculas </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./peliculas.css">
+</head>
+
+<body>
+
+    <a href="index.html" style="color: floralwhite; font-size: large;">Inicio</a>
+
+    <div id="maincontainer">
+        <div id="tabla">
+            <h3 id="divtitle">Agregar pelicula</h3>
+            <form id="databaseform">
+                <input type="text" id="titulo" placeholder="Titulo">
+                <input type="date" id="fecha" placeholder="Fecha de creacion">
+                <input type="number" id="calificacion" placeholder="Calificacion">
+
+                <ul id="listapersonajes" style="width: 100px;">
+                    
+                </ul>
+
+                <button id="enviar">Enviar</button>
+            </form>
+        </div>
+
+        <div id="listado">
+            <ul id="listapeliculas">
+
+            </ul>
+        </div>
+
+        <div id="editarpeliculas" class="oculto">
+            <h3 id="edittitle" style="text-align: center;">Editando pelicula</h3>
+            <form id="editdatabaseform">
+                <input type="text" id="edittitulo" placeholder="Titulo">
+                <input type="date" id="editfecha" placeholder="Fecha de creacion">
+                <input type="number" id="editcalificacion" placeholder="Calificacion">
+
+                <button id="actualizar">Actualizar</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="peliculas.js"></script>
+</body>
+
+</html>

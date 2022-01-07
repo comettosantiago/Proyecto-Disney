@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney - Gestion Personajes </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./personajes.css">
+</head>
+
+<body>
+
+    <a href="index.html" style="color: floralwhite; font-size: large;">Inicio</a>
+
+    <div id="maincontainer">
+        <div id="tabla">
+            <h3 id="divtitle">Agregar personaje</h3>
+            <form id="databaseform">
+                <input type="text" id="nombre" placeholder="Nombre del artista">
+                <input type="number" id="edad" placeholder="Edad">
+                <input type="number" id="peso" placeholder="Peso">
+                <input type="text" id="historia" placeholder="Historia del personaje">
+                <button id="enviar">Enviar</button>
+            </form>
+        </div>
+
+        <div id="listado">
+            <ul id="listapersonajes">
+
+            </ul>
+        </div>
+
+        <div id="editarpersonajes" class="oculto">
+            <h3 id="edittitle" style="text-align: center;">Editando personaje</h3>
+            <form id="editdatabaseform">
+                <input type="text" id="editnombre" placeholder="Nombre del artista">
+                <input type="number" id="editedad" placeholder="Edad">
+                <input type="number" id="editpeso" placeholder="Peso">
+                <input type="text" id="edithistoria" placeholder="Historia del personaje">
+                <button id="actualizar">Actualizar</button>
+            </form>
+        </div>
+
+
+    </div>
+    <script src="personajes.js"></script>
+</body>
+
+</html>
